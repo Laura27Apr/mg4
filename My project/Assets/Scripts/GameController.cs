@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        Locator.Instance.Player.PlayerTouched += GameStopped;
+        Locator.Instance.Player.PlayerLost += GameStopped;
 
         SpawnPipe();
     }

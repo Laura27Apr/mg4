@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     public delegate void Delegate();
     public event Delegate PlayerScored;
-    public event Delegate PlayerTouched;
+    public event Delegate PlayerLost;
 
     private bool _isDead;
 
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Pipe"))
         {
             _isDead = true;
-            PlayerTouched?.Invoke();
+            PlayerLost?.Invoke();
         }
     }
 
