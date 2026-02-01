@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody;
-    [SerializeField] private float _jumpForce = 5f;
+    [SerializeField] private float _flyForce = 5f;
     [SerializeField] private AudioSource _audio;
 
     public delegate void Delegate();
@@ -20,13 +20,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            Fly();
         }
     }
 
-    private void Jump()
+    private void Fly()
     {
-        _rigidbody.velocity = Vector2.up * _jumpForce;
+        _rigidbody.velocity = Vector2.up * _flyForce;
         _audio.Play();
     }
 
