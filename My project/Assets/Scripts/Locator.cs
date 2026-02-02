@@ -5,6 +5,7 @@ public class Locator : MonoBehaviour
 {
     public static Locator Instance { get; private set; }
     public Player Player { get; private set; }
+    //public GameController GameController { get; private set; }
 
     private void Awake()
     {

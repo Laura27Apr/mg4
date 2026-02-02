@@ -30,7 +30,6 @@ public class Player : MonoBehaviour
         _audio.Play();
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_isDead)
@@ -38,7 +37,7 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("ScoreZone"))
         {
-            PlayerScored?.Invoke();
+            PlayerScored?.Invoke(); 
         }
     }
 
@@ -46,6 +45,7 @@ public class Player : MonoBehaviour
     {
         if (_isDead)
             return;
+
 
         if (collision.gameObject.CompareTag("Pipe"))
         {

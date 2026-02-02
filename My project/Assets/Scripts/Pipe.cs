@@ -7,6 +7,8 @@ public class Pipe : MonoBehaviour
     [SerializeField] private float _minSpace = -1.5f;
     [SerializeField] private float _maxSpace = 1.5f;
 
+    //private bool _scored = false;
+
     private void Start()
     {
         float randomSpace = Random.Range(_minSpace, _maxSpace);
@@ -17,4 +19,6 @@ public class Pipe : MonoBehaviour
     {
         transform.position += Vector3.left * _speed * Time.deltaTime;
     }
+
+    
 }
