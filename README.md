@@ -4,8 +4,6 @@ In this game, the Player doesn't control the game as a Controller. I only have i
 
 
 GameController is in charge of controlling the game. In the Start() method of GameController, I subscribe to the player's failure event using the following code:
-
-
 When the player triggers the "PlayerLost" event, the "GameStopped" method is invoked, setting the "_gameStopped" variable to true. Then, in the Update() method of GameController, it first checks the _gameStopped variable. When the player triggers the PlayerLost event, the GameStopped() method is invoked, setting the _gameStopped variable to true. Then, in the GameController's Update() method, we check the state of _gameStopped. If that's true, the method stops early, so SpawnPipe isn't called anymore and doesn't generate any more pipes. This approach makes sure that the GameController is the only one deciding if the game should keep going.
 
 
